@@ -1,13 +1,13 @@
 using System.Reflection;
-//using System.Runtime.InteropServices;
+using System.Runtime.InteropServices;
 using System.Xml.Serialization;
 
 namespace OGMiner
 {
 	public partial class FormMain : Form
 	{
-		//[DllImport("kernel32")]
-		//static extern bool AllocConsole();
+		[DllImport("kernel32")]
+		static extern bool AllocConsole();
 
 		State st = new State();
 
@@ -15,7 +15,7 @@ namespace OGMiner
 		{
 			InitializeComponent();
 #if DEBUG
-			//AllocConsole();
+			AllocConsole();
 #endif
 			SetDoubleBuffer(dataGridView1, true);
 			LoadSettings();

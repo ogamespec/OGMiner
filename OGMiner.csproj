@@ -13,9 +13,9 @@
     <PackageIcon></PackageIcon>
     <ErrorReport>none</ErrorReport>
     <AssemblyVersion>1.1</AssemblyVersion>
-    <Title>Утилита для подсчёта выработки планет для браузерной игры OGame</Title>
+    <Title>Utility for calculating the production of planets for the browser game OGame</Title>
     <Copyright>Copyright © 2024 Andorianin</Copyright>
-    <PackageProjectUrl>https://gitverse.ru/ogamespec/OGMiner</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/ogamespec/OGMiner</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup>

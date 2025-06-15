@@ -37,6 +37,9 @@ namespace OGMiner
 			экспортироватьНастройкиToolStripMenuItem = new ToolStripMenuItem();
 			импортироватьНастройкиToolStripMenuItem = new ToolStripMenuItem();
 			сброситьНастройкиToolStripMenuItem = new ToolStripMenuItem();
+			languageToolStripMenuItem = new ToolStripMenuItem();
+			englishToolStripMenuItem = new ToolStripMenuItem();
+			русскийToolStripMenuItem = new ToolStripMenuItem();
 			toolStripSeparator2 = new ToolStripSeparator();
 			exitToolStripMenuItem = new ToolStripMenuItem();
 			helpToolStripMenuItem = new ToolStripMenuItem();
@@ -132,7 +135,7 @@ namespace OGMiner
 			// 
 			// fileToolStripMenuItem
 			// 
-			fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { экспортироватьНастройкиToolStripMenuItem, импортироватьНастройкиToolStripMenuItem, сброситьНастройкиToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
+			fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { экспортироватьНастройкиToolStripMenuItem, импортироватьНастройкиToolStripMenuItem, сброситьНастройкиToolStripMenuItem, languageToolStripMenuItem, toolStripSeparator2, exitToolStripMenuItem });
 			fileToolStripMenuItem.Name = "fileToolStripMenuItem";
 			fileToolStripMenuItem.Size = new Size(37, 20);
 			fileToolStripMenuItem.Text = "File";
@@ -140,33 +143,54 @@ namespace OGMiner
 			// экспортироватьНастройкиToolStripMenuItem
 			// 
 			экспортироватьНастройкиToolStripMenuItem.Name = "экспортироватьНастройкиToolStripMenuItem";
-			экспортироватьНастройкиToolStripMenuItem.Size = new Size(233, 22);
+			экспортироватьНастройкиToolStripMenuItem.Size = new Size(180, 22);
 			экспортироватьНастройкиToolStripMenuItem.Text = "Export settings...";
 			экспортироватьНастройкиToolStripMenuItem.Click += экспортироватьНастройкиToolStripMenuItem_Click;
 			// 
 			// импортироватьНастройкиToolStripMenuItem
 			// 
 			импортироватьНастройкиToolStripMenuItem.Name = "импортироватьНастройкиToolStripMenuItem";
-			импортироватьНастройкиToolStripMenuItem.Size = new Size(233, 22);
+			импортироватьНастройкиToolStripMenuItem.Size = new Size(180, 22);
 			импортироватьНастройкиToolStripMenuItem.Text = "Import settings...";
 			импортироватьНастройкиToolStripMenuItem.Click += импортироватьНастройкиToolStripMenuItem_Click;
 			// 
 			// сброситьНастройкиToolStripMenuItem
 			// 
 			сброситьНастройкиToolStripMenuItem.Name = "сброситьНастройкиToolStripMenuItem";
-			сброситьНастройкиToolStripMenuItem.Size = new Size(233, 22);
+			сброситьНастройкиToolStripMenuItem.Size = new Size(180, 22);
 			сброситьНастройкиToolStripMenuItem.Text = "Reset settings";
 			сброситьНастройкиToolStripMenuItem.Click += сброситьНастройкиToolStripMenuItem_Click;
+			// 
+			// languageToolStripMenuItem
+			// 
+			languageToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { englishToolStripMenuItem, русскийToolStripMenuItem });
+			languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+			languageToolStripMenuItem.Size = new Size(180, 22);
+			languageToolStripMenuItem.Text = "Language";
+			// 
+			// englishToolStripMenuItem
+			// 
+			englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+			englishToolStripMenuItem.Size = new Size(180, 22);
+			englishToolStripMenuItem.Text = "English";
+			englishToolStripMenuItem.Click += englishToolStripMenuItem_Click;
+			// 
+			// русскийToolStripMenuItem
+			// 
+			русскийToolStripMenuItem.Name = "русскийToolStripMenuItem";
+			русскийToolStripMenuItem.Size = new Size(180, 22);
+			русскийToolStripMenuItem.Text = "Русский";
+			русскийToolStripMenuItem.Click += русскийToolStripMenuItem_Click;
 			// 
 			// toolStripSeparator2
 			// 
 			toolStripSeparator2.Name = "toolStripSeparator2";
-			toolStripSeparator2.Size = new Size(230, 6);
+			toolStripSeparator2.Size = new Size(177, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
 			exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			exitToolStripMenuItem.Size = new Size(233, 22);
+			exitToolStripMenuItem.Size = new Size(180, 22);
 			exitToolStripMenuItem.Text = "Exit";
 			exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
 			// 
@@ -206,7 +230,7 @@ namespace OGMiner
 			// toolStripStatusLabel1
 			// 
 			toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-			toolStripStatusLabel1.Size = new Size(165, 19);
+			toolStripStatusLabel1.Size = new Size(105, 19);
 			toolStripStatusLabel1.Text = "Production Factor:";
 			// 
 			// toolStripStatusLabel2
@@ -219,7 +243,7 @@ namespace OGMiner
 			// toolStripStatusLabel3
 			// 
 			toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-			toolStripStatusLabel3.Size = new Size(118, 19);
+			toolStripStatusLabel3.Size = new Size(81, 19);
 			toolStripStatusLabel3.Text = "Max Crawlers:";
 			// 
 			// toolStripStatusLabel4
@@ -232,13 +256,13 @@ namespace OGMiner
 			// toolStripStatusLabel5
 			// 
 			toolStripStatusLabel5.Name = "toolStripStatusLabel5";
-			toolStripStatusLabel5.Size = new Size(107, 19);
+			toolStripStatusLabel5.Size = new Size(105, 19);
 			toolStripStatusLabel5.Text = "Production (MSU):";
 			// 
 			// toolStripStatusLabel6
 			// 
 			toolStripStatusLabel6.Name = "toolStripStatusLabel6";
-			toolStripStatusLabel6.Size = new Size(34, 19);
+			toolStripStatusLabel6.Size = new Size(42, 19);
 			toolStripStatusLabel6.Text = "0.00Bn";
 			// 
 			// tabControl1
@@ -310,7 +334,7 @@ namespace OGMiner
 			label15.AutoSize = true;
 			label15.Location = new Point(990, 249);
 			label15.Name = "label15";
-			label15.Size = new Size(213, 15);
+			label15.Size = new Size(186, 15);
 			label15.TabIndex = 36;
 			label15.Text = "Life form bonus for the class (T18)";
 			// 
@@ -319,7 +343,7 @@ namespace OGMiner
 			label13.AutoSize = true;
 			label13.Location = new Point(990, 220);
 			label13.Name = "label13";
-			label13.Size = new Size(160, 15);
+			label13.Size = new Size(106, 15);
 			label13.TabIndex = 25;
 			label13.Text = "Energy technology";
 			// 
@@ -330,7 +354,7 @@ namespace OGMiner
 			checkBox1.CheckState = CheckState.Checked;
 			checkBox1.Location = new Point(990, 449);
 			checkBox1.Name = "checkBox1";
-			checkBox1.Size = new Size(360, 19);
+			checkBox1.Size = new Size(279, 19);
 			checkBox1.TabIndex = 24;
 			checkBox1.Text = "Automatically maximize the number of crawlers";
 			checkBox1.UseVisualStyleBackColor = true;
@@ -379,7 +403,7 @@ namespace OGMiner
 			label12.AutoSize = true;
 			label12.Location = new Point(13, 112);
 			label12.Name = "label12";
-			label12.Size = new Size(52, 15);
+			label12.Size = new Size(43, 15);
 			label12.TabIndex = 33;
 			label12.Text = "Energy";
 			// 
@@ -406,7 +430,7 @@ namespace OGMiner
 			label10.AutoSize = true;
 			label10.Location = new Point(13, 83);
 			label10.Name = "label10";
-			label10.Size = new Size(60, 15);
+			label10.Size = new Size(63, 15);
 			label10.TabIndex = 30;
 			label10.Text = "Deuterium";
 			// 
@@ -433,7 +457,7 @@ namespace OGMiner
 			label8.AutoSize = true;
 			label8.Location = new Point(13, 54);
 			label8.Name = "label8";
-			label8.Size = new Size(59, 15);
+			label8.Size = new Size(43, 15);
 			label8.TabIndex = 27;
 			label8.Text = "Crystal";
 			// 
@@ -460,7 +484,7 @@ namespace OGMiner
 			label5.AutoSize = true;
 			label5.Location = new Point(13, 25);
 			label5.Name = "label5";
-			label5.Size = new Size(49, 15);
+			label5.Size = new Size(37, 15);
 			label5.TabIndex = 24;
 			label5.Text = "Metal";
 			// 
@@ -503,7 +527,7 @@ namespace OGMiner
 			label4.AutoSize = true;
 			label4.Location = new Point(990, 191);
 			label4.Name = "label4";
-			label4.Size = new Size(105, 15);
+			label4.Size = new Size(120, 15);
 			label4.TabIndex = 18;
 			label4.Text = "Position of the planet";
 			// 
@@ -520,7 +544,7 @@ namespace OGMiner
 			label3.AutoSize = true;
 			label3.Location = new Point(990, 162);
 			label3.Name = "label3";
-			label3.Size = new Size(209, 15);
+			label3.Size = new Size(164, 15);
 			label3.TabIndex = 16;
 			label3.Text = "Minimum planet temperature";
 			// 
@@ -537,7 +561,7 @@ namespace OGMiner
 			label2.AutoSize = true;
 			label2.Location = new Point(990, 104);
 			label2.Name = "label2";
-			label2.Size = new Size(124, 15);
+			label2.Size = new Size(112, 15);
 			label2.TabIndex = 13;
 			label2.Text = "Development speed";
 			// 
@@ -546,7 +570,7 @@ namespace OGMiner
 			label1.AutoSize = true;
 			label1.Location = new Point(990, 133);
 			label1.Name = "label1";
-			label1.Size = new Size(113, 15);
+			label1.Size = new Size(106, 15);
 			label1.TabIndex = 12;
 			label1.Text = "Number of planets";
 			// 
@@ -576,7 +600,7 @@ namespace OGMiner
 			ProdType.HeaderText = "Name of production/building";
 			ProdType.Name = "ProdType";
 			ProdType.ReadOnly = true;
-			ProdType.Width = 160;
+			ProdType.Width = 132;
 			// 
 			// Level
 			// 
@@ -622,7 +646,7 @@ namespace OGMiner
 			ProdSetting.HeaderText = "Production Settings";
 			ProdSetting.Items.AddRange(new object[] { "0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%", "110%", "120%", "130%", "140%", "150%" });
 			ProdSetting.Name = "ProdSetting";
-			ProdSetting.Width = 98;
+			ProdSetting.Width = 78;
 			// 
 			// toolStrip1
 			// 
@@ -650,7 +674,7 @@ namespace OGMiner
 			// 
 			воиныToolStripMenuItem.Image = Properties.Resources.ally_warriors;
 			воиныToolStripMenuItem.Name = "воиныToolStripMenuItem";
-			воиныToolStripMenuItem.Size = new Size(158, 22);
+			воиныToolStripMenuItem.Size = new Size(207, 22);
 			воиныToolStripMenuItem.Text = "Warriors";
 			воиныToolStripMenuItem.Click += воиныToolStripMenuItem_Click;
 			// 
@@ -658,7 +682,7 @@ namespace OGMiner
 			// 
 			торговцыToolStripMenuItem.Image = Properties.Resources.ally_traders;
 			торговцыToolStripMenuItem.Name = "торговцыToolStripMenuItem";
-			торговцыToolStripMenuItem.Size = new Size(158, 22);
+			торговцыToolStripMenuItem.Size = new Size(207, 22);
 			торговцыToolStripMenuItem.Text = "Traders";
 			торговцыToolStripMenuItem.Click += торговцыToolStripMenuItem_Click;
 			// 
@@ -666,7 +690,7 @@ namespace OGMiner
 			// 
 			исследователиToolStripMenuItem.Image = Properties.Resources.ally_explorers;
 			исследователиToolStripMenuItem.Name = "исследователиToolStripMenuItem";
-			исследователиToolStripMenuItem.Size = new Size(158, 22);
+			исследователиToolStripMenuItem.Size = new Size(207, 22);
 			исследователиToolStripMenuItem.Text = "Researchers";
 			исследователиToolStripMenuItem.Click += исследователиToolStripMenuItem_Click;
 			// 
@@ -674,7 +698,7 @@ namespace OGMiner
 			// 
 			неВыбраноToolStripMenuItem.Image = Properties.Resources.ally_not_selected;
 			неВыбраноToolStripMenuItem.Name = "неВыбраноToolStripMenuItem";
-			неВыбраноToolStripMenuItem.Size = new Size(158, 22);
+			неВыбраноToolStripMenuItem.Size = new Size(207, 22);
 			неВыбраноToolStripMenuItem.Text = "No alliance class selected";
 			неВыбраноToolStripMenuItem.Click += неВыбраноToolStripMenuItem_Click;
 			// 
@@ -695,7 +719,7 @@ namespace OGMiner
 			toolStripMenuItem1.Image = Properties.Resources.collector;
 			toolStripMenuItem1.ImageAlign = ContentAlignment.MiddleLeft;
 			toolStripMenuItem1.Name = "toolStripMenuItem1";
-			toolStripMenuItem1.Size = new Size(157, 22);
+			toolStripMenuItem1.Size = new Size(199, 22);
 			toolStripMenuItem1.Text = "Collector";
 			toolStripMenuItem1.Click += toolStripMenuItem1_Click;
 			// 
@@ -703,7 +727,7 @@ namespace OGMiner
 			// 
 			генералToolStripMenuItem.Image = Properties.Resources.general;
 			генералToolStripMenuItem.Name = "генералToolStripMenuItem";
-			генералToolStripMenuItem.Size = new Size(157, 22);
+			генералToolStripMenuItem.Size = new Size(199, 22);
 			генералToolStripMenuItem.Text = "General";
 			генералToolStripMenuItem.Click += генералToolStripMenuItem_Click;
 			// 
@@ -711,7 +735,7 @@ namespace OGMiner
 			// 
 			исследовательToolStripMenuItem.Image = Properties.Resources.explorer;
 			исследовательToolStripMenuItem.Name = "исследовательToolStripMenuItem";
-			исследовательToolStripMenuItem.Size = new Size(157, 22);
+			исследовательToolStripMenuItem.Size = new Size(199, 22);
 			исследовательToolStripMenuItem.Text = "Discoverer";
 			исследовательToolStripMenuItem.Click += исследовательToolStripMenuItem_Click;
 			// 
@@ -719,7 +743,7 @@ namespace OGMiner
 			// 
 			неВыбранToolStripMenuItem.Image = Properties.Resources.not_selected;
 			неВыбранToolStripMenuItem.Name = "неВыбранToolStripMenuItem";
-			неВыбранToolStripMenuItem.Size = new Size(157, 22);
+			неВыбранToolStripMenuItem.Size = new Size(199, 22);
 			неВыбранToolStripMenuItem.Text = "No player class selected";
 			неВыбранToolStripMenuItem.Click += неВыбранToolStripMenuItem_Click;
 			// 
@@ -738,7 +762,7 @@ namespace OGMiner
 			// 
 			людиToolStripMenuItem.Image = Properties.Resources.human;
 			людиToolStripMenuItem.Name = "людиToolStripMenuItem";
-			людиToolStripMenuItem.Size = new Size(141, 22);
+			людиToolStripMenuItem.Size = new Size(184, 22);
 			людиToolStripMenuItem.Text = "Humans";
 			людиToolStripMenuItem.Click += людиToolStripMenuItem_Click;
 			// 
@@ -746,7 +770,7 @@ namespace OGMiner
 			// 
 			кэлишToolStripMenuItem.Image = Properties.Resources.shaved_pubis;
 			кэлишToolStripMenuItem.Name = "кэлишToolStripMenuItem";
-			кэлишToolStripMenuItem.Size = new Size(141, 22);
+			кэлишToolStripMenuItem.Size = new Size(184, 22);
 			кэлишToolStripMenuItem.Text = "Kaelesh";
 			кэлишToolStripMenuItem.Click += кэлишToolStripMenuItem_Click;
 			// 
@@ -754,7 +778,7 @@ namespace OGMiner
 			// 
 			рокталToolStripMenuItem.Image = Properties.Resources.rock;
 			рокталToolStripMenuItem.Name = "рокталToolStripMenuItem";
-			рокталToolStripMenuItem.Size = new Size(141, 22);
+			рокталToolStripMenuItem.Size = new Size(184, 22);
 			рокталToolStripMenuItem.Text = "Rock’tal";
 			рокталToolStripMenuItem.Click += рокталToolStripMenuItem_Click;
 			// 
@@ -762,7 +786,7 @@ namespace OGMiner
 			// 
 			мехиToolStripMenuItem.Image = Properties.Resources.mecha;
 			мехиToolStripMenuItem.Name = "мехиToolStripMenuItem";
-			мехиToolStripMenuItem.Size = new Size(141, 22);
+			мехиToolStripMenuItem.Size = new Size(184, 22);
 			мехиToolStripMenuItem.Text = "Mechas";
 			мехиToolStripMenuItem.Click += мехиToolStripMenuItem_Click;
 			// 
@@ -770,7 +794,7 @@ namespace OGMiner
 			// 
 			неВыбраноToolStripMenuItem1.Image = Properties.Resources.nolf;
 			неВыбраноToolStripMenuItem1.Name = "неВыбраноToolStripMenuItem1";
-			неВыбраноToolStripMenuItem1.Size = new Size(141, 22);
+			неВыбраноToolStripMenuItem1.Size = new Size(184, 22);
 			неВыбраноToolStripMenuItem1.Text = "No life form selected";
 			неВыбраноToolStripMenuItem1.Click += неВыбраноToolStripMenuItem1_Click;
 			// 
@@ -949,5 +973,8 @@ namespace OGMiner
 		private ToolStripButton toolStripButton6;
 		private ToolStripStatusLabel toolStripStatusLabel5;
 		private ToolStripStatusLabel toolStripStatusLabel6;
+		private ToolStripMenuItem languageToolStripMenuItem;
+		private ToolStripMenuItem englishToolStripMenuItem;
+		private ToolStripMenuItem русскийToolStripMenuItem;
 	}
 }

@@ -25,7 +25,9 @@ namespace OGMiner
 
 		string CurrentLang()
 		{
-			return "ru";
+			string lang = Properties.Settings.Default.lang;
+			if (lang == "") return "en";
+			return lang;
 		}
 
 		void SetInterfaceLanguage(string lang)
@@ -81,6 +83,26 @@ namespace OGMiner
 			toolStripButton5.ToolTipText = Loca.GetString(lang, "GEOLOGIST_TIP");
 			toolStripButton6.ToolTipText = Loca.GetString(lang, "TECHNOCRAT_TIP");
 			Text = "OGMiner by Andorianin (" + Assembly.GetExecutingAssembly().GetName().Version.ToString() + ")";
+		}
+
+		void SaveLanguage(string lang)
+		{
+			Properties.Settings.Default.lang = lang;
+			Properties.Settings.Default.Save();
+		}
+
+		private void englishToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			SaveLanguage("en");
+			SetInterfaceLanguage(CurrentLang());
+			RebuildGrid();
+		}
+
+		private void русскийToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			SaveLanguage("ru");
+			SetInterfaceLanguage(CurrentLang());
+			RebuildGrid();
 		}
 
 		/// <summary>
@@ -467,6 +489,7 @@ namespace OGMiner
 			StateToGrid();
 			toolStripStatusLabel2.Text = st.factor.ToString("0.00");
 			toolStripStatusLabel4.Text = st.crawlers_count_max.ToString();
+			toolStripStatusLabel6.Text = (OGameProd.GetProductionMSU_AllPlanets(ref st, 3, 2, 1) / 1000000000.0).ToString("0.00") + Loca.GetString(CurrentLang(), "BN");
 			SaveSettings();
 		}
 
@@ -513,7 +536,7 @@ namespace OGMiner
 						obj_base = LifeForm.ObjectID.Human_Base;
 						pic = Properties.Resources.human;
 						break;
-					case LifeForm.Type.Mecha: 
+					case LifeForm.Type.Mecha:
 						arr = st.mecha_buildings;
 						obj_base = LifeForm.ObjectID.Mecha_Base;
 						pic = Properties.Resources.mecha;
@@ -886,7 +909,7 @@ namespace OGMiner
 		{
 			if (openFileDialog1.ShowDialog() == DialogResult.OK)
 			{
-				string text = File.ReadAllText (openFileDialog1.FileName, System.Text.Encoding.UTF8);
+				string text = File.ReadAllText(openFileDialog1.FileName, System.Text.Encoding.UTF8);
 				st = DeserializeSettings(text);
 				StateToControls();
 				Console.WriteLine("Settings loaded from a file {0}", openFileDialog1.FileName);
@@ -900,7 +923,7 @@ namespace OGMiner
 			Console.WriteLine("The settings are reset to their original state.");
 		}
 
-		string SerializeSettings ()
+		string SerializeSettings()
 		{
 			XmlSerializer ser = new XmlSerializer(typeof(State));
 			using (StringWriter textWriter = new StringWriter())

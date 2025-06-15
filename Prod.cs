@@ -341,4 +341,14 @@ class OGameProd
 		Console.WriteLine("Production factor: {0}", st.factor);
 	}
 
+	public static double GetProductionMSU_AllPlanets(ref OGMiner.State st, double mrate, double krate, double drate)
+	{
+		double d_factor = mrate;
+		double k_factor = krate;
+		double res =
+			st.total_m * 24 * st.num_planets +
+			st.total_k * 24 * k_factor * st.num_planets +
+			st.total_d * 24 * d_factor * st.num_planets;
+		return res;
+	}
 }

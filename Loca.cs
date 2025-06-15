@@ -223,19 +223,19 @@ public static class Loca
 	/// <param name="language">Язык (например, "en", "ru")</param>
 	/// <param name="stringId">ID строки</param>
 	/// <param name="args">Аргументы для замены плейсхолдеров</param>
-	/// <returns>Локализованная строка или null, если не найдена</returns>
+	/// <returns>Локализованная строка или ID, если не найдена</returns>
 	public static string GetString(string language, string stringId, params object[] args)
 	{
 		if (!_localizations.TryGetValue(language, out var languageStrings))
 		{
-			// Язык не найден - можно вернуть строку на языке по умолчанию или null
-			return null;
+			// Язык не найден - можно вернуть ID
+			return stringId;
 		}
 
 		if (!languageStrings.TryGetValue(stringId, out var format))
 		{
 			// ID строки не найден
-			return null;
+			return stringId;
 		}
 
 		// Заменяем плейсхолдеры %1, %2,... на соответствующие аргументы

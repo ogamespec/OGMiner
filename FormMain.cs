@@ -508,15 +508,15 @@ namespace OGMiner
 
 			ClearGrid();
 
-			AddGridRow("Basic Income", null, null, null, null, null, null, null, ObjectID.NaturalProd);
+			AddGridRow(Loca.GetString(CurrentLang(), "NaturalProd"), null, null, null, null, null, null, null, ObjectID.NaturalProd);
 
 			// Production buildings
 
-			AddGridRow("Metal Mine", st.metal_mine, Properties.Resources.metal_mine, null, null, null, null, st.metal_prod.ToString() + "%", ObjectID.MetalMine);
-			AddGridRow("Crystal Mine", st.crystal_mine, Properties.Resources.crystal_mine, null, null, null, null, st.crystal_prod.ToString() + "%", ObjectID.CrystalMine);
-			AddGridRow("Deuterium Synthesizer", st.deut_synth, Properties.Resources.deut_synth, null, null, null, null, st.deut_prod.ToString() + "%", ObjectID.DeutSynth);
-			AddGridRow("Solar Plant", st.solar_plant, Properties.Resources.solar, null, null, null, null, st.solar_prod.ToString() + "%", ObjectID.SolarPlant);
-			AddGridRow("Fusion Reactor", st.fusion, Properties.Resources.fusion, null, null, null, null, st.fusion_prod.ToString() + "%", ObjectID.Fusion);
+			AddGridRow(Loca.GetString(CurrentLang(), "MetalMine"), st.metal_mine, Properties.Resources.metal_mine, null, null, null, null, st.metal_prod.ToString() + "%", ObjectID.MetalMine);
+			AddGridRow(Loca.GetString(CurrentLang(), "CrystalMine"), st.crystal_mine, Properties.Resources.crystal_mine, null, null, null, null, st.crystal_prod.ToString() + "%", ObjectID.CrystalMine);
+			AddGridRow(Loca.GetString(CurrentLang(), "DeutSynth"), st.deut_synth, Properties.Resources.deut_synth, null, null, null, null, st.deut_prod.ToString() + "%", ObjectID.DeutSynth);
+			AddGridRow(Loca.GetString(CurrentLang(), "SolarPlant"), st.solar_plant, Properties.Resources.solar, null, null, null, null, st.solar_prod.ToString() + "%", ObjectID.SolarPlant);
+			AddGridRow(Loca.GetString(CurrentLang(), "Fusion"), st.fusion, Properties.Resources.fusion, null, null, null, null, st.fusion_prod.ToString() + "%", ObjectID.Fusion);
 
 			// LF Buildings
 			if (lf != LifeForm.Type.NoLifeForm)
@@ -557,37 +557,37 @@ namespace OGMiner
 			}
 
 			// Producing units
-			AddGridRow("Solar Satellite", st.ssat, Properties.Resources.ssat, null, null, null, null, st.ssat_prod.ToString() + "%", ObjectID.SolarSat);
-			AddGridRow("Crawler", st.crawlers, Properties.Resources.crawler, null, null, null, null, st.crawlers_prod.ToString() + "%", ObjectID.Crawler);
+			AddGridRow(Loca.GetString(CurrentLang(), "SolarSat"), st.ssat, Properties.Resources.ssat, null, null, null, null, st.ssat_prod.ToString() + "%", ObjectID.SolarSat);
+			AddGridRow(Loca.GetString(CurrentLang(), "Crawler"), st.crawlers, Properties.Resources.crawler, null, null, null, null, st.crawlers_prod.ToString() + "%", ObjectID.Crawler);
 
 			// Research
-			AddGridRow("Plasma Technology", st.plasma_tech, Properties.Resources.plasma, null, null, null, null, null, ObjectID.PlasmaTech);
+			AddGridRow(Loca.GetString(CurrentLang(), "PlasmaTech"), st.plasma_tech, Properties.Resources.plasma, null, null, null, null, null, ObjectID.PlasmaTech);
 
 			// Items
-			AddGridRow("Metal Booster", null, null, null, null, null, null, st.metal_booster.ToString() + "%", ObjectID.MetalBooster);
-			AddGridRow("Crystal Booster", null, null, null, null, null, null, st.crystal_booster.ToString() + "%", ObjectID.CrystalBooster);
-			AddGridRow("Deuterium Booster", null, null, null, null, null, null, st.deut_booster.ToString() + "%", ObjectID.DeutBooster);
-			AddGridRow("Energy Booster", null, null, null, null, null, null, st.energy_booster.ToString() + "%", ObjectID.EnergyBooster);
+			AddGridRow(Loca.GetString(CurrentLang(), "MetalBooster"), null, null, null, null, null, null, st.metal_booster.ToString() + "%", ObjectID.MetalBooster);
+			AddGridRow(Loca.GetString(CurrentLang(), "CrystalBooster"), null, null, null, null, null, null, st.crystal_booster.ToString() + "%", ObjectID.CrystalBooster);
+			AddGridRow(Loca.GetString(CurrentLang(), "DeutBooster"), null, null, null, null, null, null, st.deut_booster.ToString() + "%", ObjectID.DeutBooster);
+			AddGridRow(Loca.GetString(CurrentLang(), "EnergyBooster"), null, null, null, null, null, null, st.energy_booster.ToString() + "%", ObjectID.EnergyBooster);
 
 			// Officers
-			AddGridRow("Geologist", null, geologist ? Properties.Resources.geologist_on : Properties.Resources.geologist_off, null, null, null, null, null, ObjectID.GeologistBonus);
-			AddGridRow("Engineer", null, engineer ? Properties.Resources.engineer_on : Properties.Resources.engineer_off, null, null, null, null, null, ObjectID.EngineerBonus);
-			AddGridRow("Commanding Staff", null, command_staff ? Properties.Resources.all : Properties.Resources.all_off, null, null, null, null, null, ObjectID.CommandStaffBonus);
+			AddGridRow(Loca.GetString(CurrentLang(), "GeologistBonus"), null, geologist ? Properties.Resources.geologist_on : Properties.Resources.geologist_off, null, null, null, null, null, ObjectID.GeologistBonus);
+			AddGridRow(Loca.GetString(CurrentLang(), "EngineerBonus"), null, engineer ? Properties.Resources.engineer_on : Properties.Resources.engineer_off, null, null, null, null, null, ObjectID.EngineerBonus);
+			AddGridRow(Loca.GetString(CurrentLang(), "CommandStaffBonus"), null, command_staff ? Properties.Resources.all : Properties.Resources.all_off, null, null, null, null, null, ObjectID.CommandStaffBonus);
 
 			// Class
 			switch (pc)
 			{
 				case PlayerClass.Collector:
-					AddGridRow("Class", null, Properties.Resources.collector, null, null, null, null, null, ObjectID.PlayerClassBonus);
+					AddGridRow(Loca.GetString(CurrentLang(), "PlayerClassBonus"), null, Properties.Resources.collector, null, null, null, null, null, ObjectID.PlayerClassBonus);
 					break;
 				case PlayerClass.General:
-					AddGridRow("Class", null, Properties.Resources.general, null, null, null, null, null, ObjectID.PlayerClassBonus);
+					AddGridRow(Loca.GetString(CurrentLang(), "PlayerClassBonus"), null, Properties.Resources.general, null, null, null, null, null, ObjectID.PlayerClassBonus);
 					break;
 				case PlayerClass.ExpoDrocher:
-					AddGridRow("Class", null, Properties.Resources.explorer, null, null, null, null, null, ObjectID.PlayerClassBonus);
+					AddGridRow(Loca.GetString(CurrentLang(), "PlayerClassBonus"), null, Properties.Resources.explorer, null, null, null, null, null, ObjectID.PlayerClassBonus);
 					break;
 				case PlayerClass.NoClass:
-					AddGridRow("Class", null, Properties.Resources.not_selected, null, null, null, null, null, ObjectID.PlayerClassBonus);
+					AddGridRow(Loca.GetString(CurrentLang(), "PlayerClassBonus"), null, Properties.Resources.not_selected, null, null, null, null, null, ObjectID.PlayerClassBonus);
 					break;
 			}
 
@@ -595,32 +595,32 @@ namespace OGMiner
 			switch (ac)
 			{
 				case AllyClass.Traders:
-					AddGridRow("Alliance Class", null, Properties.Resources.ally_traders, null, null, null, null, null, ObjectID.AllyClassBonus);
+					AddGridRow(Loca.GetString(CurrentLang(), "AllyClassBonus"), null, Properties.Resources.ally_traders, null, null, null, null, null, ObjectID.AllyClassBonus);
 					break;
 				case AllyClass.Warriors:
-					AddGridRow("Alliance Class", null, Properties.Resources.ally_warriors, null, null, null, null, null, ObjectID.AllyClassBonus);
+					AddGridRow(Loca.GetString(CurrentLang(), "AllyClassBonus"), null, Properties.Resources.ally_warriors, null, null, null, null, null, ObjectID.AllyClassBonus);
 					break;
 				case AllyClass.Explorers:
-					AddGridRow("Alliance Class", null, Properties.Resources.ally_explorers, null, null, null, null, null, ObjectID.AllyClassBonus);
+					AddGridRow(Loca.GetString(CurrentLang(), "AllyClassBonus"), null, Properties.Resources.ally_explorers, null, null, null, null, null, ObjectID.AllyClassBonus);
 					break;
 				case AllyClass.NotSelected:
-					AddGridRow("Alliance Class", null, Properties.Resources.ally_not_selected, null, null, null, null, null, ObjectID.AllyClassBonus);
+					AddGridRow(Loca.GetString(CurrentLang(), "AllyClassBonus"), null, Properties.Resources.ally_not_selected, null, null, null, null, null, ObjectID.AllyClassBonus);
 					break;
 			}
 
 			// Life-form tech bonus
-			AddGridRow("Lifeform Tech Bonus", null, null, null, null, null, null, null, ObjectID.LFBonus);
+			AddGridRow(Loca.GetString(CurrentLang(), "LFBonus"), null, null, null, null, null, null, null, ObjectID.LFBonus);
 
 			// Total
-			AddGridRow("Total", null, null, null, null, null, null, null);
+			AddGridRow(Loca.GetString(CurrentLang(), "Total"), null, null, null, null, null, null, null);
 
-			AddGridRow("Energy consumption", null, null, null, null, null, null, null, ObjectID.ConsEnergy);
-			AddGridRow("Total per hour", null, null, null, null, null, null, null, ObjectID.ProdHour);
-			AddGridRow("Total per day", null, null, null, null, null, null, null, ObjectID.ProdDay);
-			AddGridRow("Total per week", null, null, null, null, null, null, null, ObjectID.ProdWeek);
-			AddGridRow("Total per hour (all planets)", null, null, null, null, null, null, null, ObjectID.ProdHourAll);
-			AddGridRow("Total per day (all planets)", null, null, null, null, null, null, null, ObjectID.ProdDayAll);
-			AddGridRow("Total per week (all planets)", null, null, null, null, null, null, null, ObjectID.ProdWeekAll);
+			AddGridRow(Loca.GetString(CurrentLang(), "ConsEnergy"), null, null, null, null, null, null, null, ObjectID.ConsEnergy);
+			AddGridRow(Loca.GetString(CurrentLang(), "ProdHour"), null, null, null, null, null, null, null, ObjectID.ProdHour);
+			AddGridRow(Loca.GetString(CurrentLang(), "ProdDay"), null, null, null, null, null, null, null, ObjectID.ProdDay);
+			AddGridRow(Loca.GetString(CurrentLang(), "ProdWeek"), null, null, null, null, null, null, null, ObjectID.ProdWeek);
+			AddGridRow(Loca.GetString(CurrentLang(), "ProdHourAll"), null, null, null, null, null, null, null, ObjectID.ProdHourAll);
+			AddGridRow(Loca.GetString(CurrentLang(), "ProdDayAll"), null, null, null, null, null, null, null, ObjectID.ProdDayAll);
+			AddGridRow(Loca.GetString(CurrentLang(), "ProdWeekAll"), null, null, null, null, null, null, null, ObjectID.ProdWeekAll);
 
 			toolStripStatusLabel2.Text = "---";
 			toolStripStatusLabel4.Text = "0";

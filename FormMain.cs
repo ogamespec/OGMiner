@@ -20,10 +20,15 @@ namespace OGMiner
 			SetDoubleBuffer(dataGridView1, true);
 			LoadSettings();
 			StateToControls();
-			SetLanguage("ru");
+			SetInterfaceLanguage(CurrentLang());
 		}
 
-		void SetLanguage(string lang)
+		string CurrentLang()
+		{
+			return "ru";
+		}
+
+		void SetInterfaceLanguage(string lang)
 		{
 			экспортироватьНастройкиToolStripMenuItem.Text = Loca.GetString(lang, "EXPORT_SETTINGS");
 			импортироватьНастройкиToolStripMenuItem.Text = Loca.GetString(lang, "IMPORT_SETTINGS");
@@ -140,7 +145,7 @@ namespace OGMiner
 
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			FormAbout about = new FormAbout("ru");
+			FormAbout about = new FormAbout(CurrentLang());
 			about.ShowDialog();
 		}
 
@@ -524,7 +529,7 @@ namespace OGMiner
 				foreach (var id in list)
 				{
 					int level = id - obj_base;
-					AddGridRow(LifeForm.GetBuildingName(id), arr != null ? arr[level] : 0, pic, null, null, null, null, null, (ObjectID)id);
+					AddGridRow(LifeForm.GetBuildingName(id, CurrentLang()), arr != null ? arr[level] : 0, pic, null, null, null, null, null, (ObjectID)id);
 				}
 			}
 

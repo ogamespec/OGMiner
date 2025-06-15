@@ -81,53 +81,53 @@ public class LifeForm
 	}
 
 
-	static public string GetBuildingName (ObjectID id)
+	static public string GetBuildingName (ObjectID id, string lang)
 	{
 		switch (id)
 		{
-			case ObjectID.Human_TechBuilding: return "Research Centre";
-			case ObjectID.Human_School: return "Academy of Sciences";
-			case ObjectID.Human_HighSchool: return "Neuro-Calibration Centre";
-			case ObjectID.Human_ResourceBooster1: return "High Energy Smelting";
-			case ObjectID.Human_LifeSupport1: return "Food Silo";
-			case ObjectID.Human_ResourceBooster2: return "Fusion-Powered Production";
-			case ObjectID.Human_LifeSupport2: return "Skyscraper";
-			case ObjectID.Human_ResourceBooster3: return "Biotech Lab";
-			case ObjectID.Human_TechTreeBooster: return "Metropolis";
-			case ObjectID.Human_LifeFormProtection: return "Planetary Shield";
+			case ObjectID.Human_TechBuilding: return Loca.GetString(lang, "Human_TechBuilding");
+			case ObjectID.Human_School: return Loca.GetString(lang, "Human_School");
+			case ObjectID.Human_HighSchool: return Loca.GetString(lang, "Human_HighSchool");
+			case ObjectID.Human_ResourceBooster1: return Loca.GetString(lang, "Human_ResourceBooster1");
+			case ObjectID.Human_LifeSupport1: return Loca.GetString(lang, "Human_LifeSupport1");
+			case ObjectID.Human_ResourceBooster2: return Loca.GetString(lang, "Human_ResourceBooster2");
+			case ObjectID.Human_LifeSupport2: return Loca.GetString(lang, "Human_LifeSupport2");
+			case ObjectID.Human_ResourceBooster3: return Loca.GetString(lang, "Human_ResourceBooster3");
+			case ObjectID.Human_TechTreeBooster: return Loca.GetString(lang, "Human_TechTreeBooster");
+			case ObjectID.Human_LifeFormProtection: return Loca.GetString(lang, "Human_LifeFormProtection");
 
-			case ObjectID.Rock_TechBuilding: return "Rune Technologium";
-			case ObjectID.Rock_School: return "Rune Forge";
-			case ObjectID.Rock_HighSchool: return "Oriktorium";
-			case ObjectID.Rock_ResourceBooster1: return "Magma Forge";
-			case ObjectID.Rock_EnergyManipulator: return "Disruption Chamber";
-			case ObjectID.Rock_CostReductionBuildings1: return "Megalith";
-			case ObjectID.Rock_ResourceBooster2: return "Crystal Refinery";
-			case ObjectID.Rock_ResourceBooster3: return "Deuterium Synthesissy";
-			case ObjectID.Rock_CostReductionBuildings2: return "Mineral Research Centre";
-			case ObjectID.Rock_RecycleAttackerFleet: return "Advanced Recycling Plant";
+			case ObjectID.Rock_TechBuilding: return Loca.GetString(lang, "Rock_TechBuilding");
+			case ObjectID.Rock_School: return Loca.GetString(lang, "Rock_School");
+			case ObjectID.Rock_HighSchool: return Loca.GetString(lang, "Rock_HighSchool");
+			case ObjectID.Rock_ResourceBooster1: return Loca.GetString(lang, "Rock_ResourceBooster1");
+			case ObjectID.Rock_EnergyManipulator: return Loca.GetString(lang, "Rock_EnergyManipulator");
+			case ObjectID.Rock_CostReductionBuildings1: return Loca.GetString(lang, "Rock_CostReductionBuildings1");
+			case ObjectID.Rock_ResourceBooster2: return Loca.GetString(lang, "Rock_ResourceBooster2");
+			case ObjectID.Rock_ResourceBooster3: return Loca.GetString(lang, "Rock_ResourceBooster3");
+			case ObjectID.Rock_CostReductionBuildings2: return Loca.GetString(lang, "Rock_CostReductionBuildings2");
+			case ObjectID.Rock_RecycleAttackerFleet: return Loca.GetString(lang, "Rock_RecycleAttackerFleet");
 
-			case ObjectID.Mecha_TechBuilding: return "Robotics Research Centre";
-			case ObjectID.Mecha_School: return "Update Network";
-			case ObjectID.Mecha_HighSchool: return "Quantum Computer Centre";
-			case ObjectID.Mecha_ProductionSpeedShips: return "Automatised Assembly Centre";
-			case ObjectID.Mecha_TechTreeBooster1: return "High-Performance Transformer";
-			case ObjectID.Mecha_ResourceBooster: return "Microchip Assembly Line";
-			case ObjectID.Mecha_LifeSupport1: return "Production Assembly Hall";
-			case ObjectID.Mecha_LifeSupport2: return "High-Performance Synthesiser";
-			case ObjectID.Mecha_TechTreeBooster2: return "Chip Mass Production";
-			case ObjectID.Mecha_SpaceDockExtender: return "Nano Repair Bots";
+			case ObjectID.Mecha_TechBuilding: return Loca.GetString(lang, "Mecha_TechBuilding");
+			case ObjectID.Mecha_School: return Loca.GetString(lang, "Mecha_School");
+			case ObjectID.Mecha_HighSchool: return Loca.GetString(lang, "Mecha_HighSchool");
+			case ObjectID.Mecha_ProductionSpeedShips: return Loca.GetString(lang, "Mecha_ProductionSpeedShips");
+			case ObjectID.Mecha_TechTreeBooster1: return Loca.GetString(lang, "Mecha_TechTreeBooster1");
+			case ObjectID.Mecha_ResourceBooster: return Loca.GetString(lang, "Mecha_ResourceBooster");
+			case ObjectID.Mecha_LifeSupport1: return Loca.GetString(lang, "Mecha_LifeSupport1");
+			case ObjectID.Mecha_LifeSupport2: return Loca.GetString(lang, "Mecha_LifeSupport2");
+			case ObjectID.Mecha_TechTreeBooster2: return Loca.GetString(lang, "Mecha_TechTreeBooster2");
+			case ObjectID.Mecha_SpaceDockExtender: return Loca.GetString(lang, "Mecha_SpaceDockExtender");
 
-			case ObjectID.Kaelish_TechBuilding: return "Vortex Chamber";
-			case ObjectID.Kaelish_School: return "Halls of Realisation";
-			case ObjectID.Kaelish_HighSchool: return "Forum of Transcendence";
-			case ObjectID.Kaelish_LifeSupport1: return "Antimatter Convector";
-			case ObjectID.Kaelish_LifeSupportAndResearch: return "Cloning Laboratory";
-			case ObjectID.Kaelish_LifeSupport2: return "Chrysalis Accelerator";
-			case ObjectID.Kaelish_PlanetFieldsBooster: return "Bio Modifier";
-			case ObjectID.Kaelish_UnlockCondition: return "Psionic Modulator";
-			case ObjectID.Kaelish_ProductionSpeedShips: return "Ship Manufacturing Hall";
-			case ObjectID.Kaelish_MoonChanceIncrease: return "Supra Refractor";
+			case ObjectID.Kaelish_TechBuilding: return Loca.GetString(lang, "Kaelish_TechBuilding");
+			case ObjectID.Kaelish_School: return Loca.GetString(lang, "Kaelish_School");
+			case ObjectID.Kaelish_HighSchool: return Loca.GetString(lang, "Kaelish_HighSchool");
+			case ObjectID.Kaelish_LifeSupport1: return Loca.GetString(lang, "Kaelish_LifeSupport1");
+			case ObjectID.Kaelish_LifeSupportAndResearch: return Loca.GetString(lang, "Kaelish_LifeSupportAndResearch");
+			case ObjectID.Kaelish_LifeSupport2: return Loca.GetString(lang, "Kaelish_LifeSupport2");
+			case ObjectID.Kaelish_PlanetFieldsBooster: return Loca.GetString(lang, "Kaelish_PlanetFieldsBooster");
+			case ObjectID.Kaelish_UnlockCondition: return Loca.GetString(lang, "Kaelish_UnlockCondition");
+			case ObjectID.Kaelish_ProductionSpeedShips: return Loca.GetString(lang, "Kaelish_ProductionSpeedShips");
+			case ObjectID.Kaelish_MoonChanceIncrease: return Loca.GetString(lang, "Kaelish_MoonChanceIncrease");
 		}
 		return "Unknown";
 	}

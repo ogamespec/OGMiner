@@ -503,7 +503,7 @@ namespace OGMiner
 			label4.AutoSize = true;
 			label4.Location = new Point(990, 191);
 			label4.Name = "label4";
-			label4.Size = new Size(120, 15);
+			label4.Size = new Size(105, 15);
 			label4.TabIndex = 18;
 			label4.Text = "Position of the planet";
 			// 

@@ -20,6 +20,62 @@ namespace OGMiner
 			SetDoubleBuffer(dataGridView1, true);
 			LoadSettings();
 			StateToControls();
+			SetLanguage("ru");
+		}
+
+		void SetLanguage(string lang)
+		{
+			экспортироватьНастройкиToolStripMenuItem.Text = Loca.GetString(lang, "EXPORT_SETTINGS");
+			импортироватьНастройкиToolStripMenuItem.Text = Loca.GetString(lang, "IMPORT_SETTINGS");
+			сброситьНастройкиToolStripMenuItem.Text = Loca.GetString(lang, "RESET_SETTINGS");
+			toolStripStatusLabel1.Text = Loca.GetString(lang, "PROD_FACTOR");
+			toolStripStatusLabel3.Text = Loca.GetString(lang, "MAX_CRAWLERS");
+			toolStripStatusLabel5.Text = Loca.GetString(lang, "PROD_MSU_TOTAL");
+			toolStripStatusLabel6.Text = "0.00" + Loca.GetString(lang, "BN");
+			tabPage1.Text = Loca.GetString(lang, "PROD_CALC");
+			label15.Text = Loca.GetString(lang, "LF_BONUS");
+			label13.Text = Loca.GetString(lang, "ENERGY_TECH");
+			checkBox1.Text = Loca.GetString(lang, "MAXIMIZE_CRAWLERS");
+			groupBox1.Text = Loca.GetString(lang, "LF_GLOBAL_BONUS");
+			label12.Text = Loca.GetString(lang, "ENERGY");
+			label10.Text = Loca.GetString(lang, "DEUT");
+			label8.Text = Loca.GetString(lang, "CRYS");
+			label5.Text = Loca.GetString(lang, "MET");
+			button1.Text = Loca.GetString(lang, "RECALC");
+			label4.Text = Loca.GetString(lang, "PLANET_POS");
+			label3.Text = Loca.GetString(lang, "PLANET_MIN_TEMP");
+			label2.Text = Loca.GetString(lang, "ECO_SPEED");
+			label1.Text = Loca.GetString(lang, "NUM_PLANETS");
+			ProdType.HeaderText = Loca.GetString(lang, "ID_NAME");
+			Level.HeaderText = Loca.GetString(lang, "LEVEL");
+			ProdImage.HeaderText = Loca.GetString(lang, "PICTURE");
+			m.HeaderText = Loca.GetString(lang, "MET");
+			k.HeaderText = Loca.GetString(lang, "CRYS");
+			d.HeaderText = Loca.GetString(lang, "DEUT");
+			e.HeaderText = Loca.GetString(lang, "ENERGY");
+			ProdSetting.HeaderText = Loca.GetString(lang, "PROD_SETTINGS");
+			toolStripDropDownButton2.ToolTipText = Loca.GetString(lang, "CHOOSE_ALLY_CLASS");
+			воиныToolStripMenuItem.Text = Loca.GetString(lang, "ALLY_CLASS_WARRIORS");
+			торговцыToolStripMenuItem.Text = Loca.GetString(lang, "ALLY_CLASS_TRADERS");
+			исследователиToolStripMenuItem.Text = Loca.GetString(lang, "ALLY_CLASS_RESEARCHERS");
+			неВыбраноToolStripMenuItem.Text = Loca.GetString(lang, "ALLY_CLASS_NONE");
+			toolStripDropDownButton1.ToolTipText = Loca.GetString(lang, "CHOOSE_PLAYER_CLASS");
+			toolStripMenuItem1.Text = Loca.GetString(lang, "PLAYER_CLASS_COLLECTOR");
+			генералToolStripMenuItem.Text = Loca.GetString(lang, "PLAYER_CLASS_GENERAL");
+			исследовательToolStripMenuItem.Text = Loca.GetString(lang, "PLAYER_CLASS_DISCO");
+			неВыбранToolStripMenuItem.Text = Loca.GetString(lang, "PLAYER_CLASS_NONE");
+			toolStripDropDownButton3.ToolTipText = Loca.GetString(lang, "CHOOSE_LF");
+			людиToolStripMenuItem.Text = Loca.GetString(lang, "LF_TYPE_HUMANS");
+			кэлишToolStripMenuItem.Text = Loca.GetString(lang, "LF_TYPE_SHAVED_PUBIS");
+			рокталToolStripMenuItem.Text = Loca.GetString(lang, "LF_TYPE_ROCK");
+			мехиToolStripMenuItem.Text = Loca.GetString(lang, "LF_TYPE_MECHA");
+			неВыбраноToolStripMenuItem1.Text = Loca.GetString(lang, "LF_TYPE_NONE");
+			toolStripButton3.ToolTipText = Loca.GetString(lang, "COMMANDER_TIP");
+			toolStripButton1.ToolTipText = Loca.GetString(lang, "ADMIRAL_TIP");
+			toolStripButton4.ToolTipText = Loca.GetString(lang, "ENGINEER_TIP");
+			toolStripButton5.ToolTipText = Loca.GetString(lang, "GEOLOGIST_TIP");
+			toolStripButton6.ToolTipText = Loca.GetString(lang, "TECHNOCRAT_TIP");
+			Text = "OGMiner by Andorianin (" + Assembly.GetExecutingAssembly().GetName().Version.ToString() + ")";
 		}
 
 		/// <summary>

@@ -304,7 +304,7 @@ public class LifeForm
 	/// </summary>
 	static public double GetEnergyReductionFactor (ref OGMiner.State state)
 	{
-		// Reduced energy consumption is provided by only one lodge, the Rocktale Disruption Chamber (-0.5% per level)
+		// Reduced energy consumption is provided by only one building, the Rock`tal Disruption Chamber (-0.5% per level)
 		if (state.lf == Type.Rocktal && state.rock_buildings[4] != 0)
 		{
 			return Math.Max(0.6, 1.0 - 0.005 * state.rock_buildings[4]);		// 40% cap

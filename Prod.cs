@@ -110,7 +110,7 @@ class OGameProd
 			st.geologist_k = 0;
 			st.geologist_d = 0;
 		}
-		// Bonus when all officers are active (“Command Staff”) (+2%)
+		// Bonus when all officers are active ("Command Staff") (+2%)
 		if (st.commander && st.admiral && st.engineer && st.geologist && st.technocrate)
 		{
 			st.staff_m = st.base_m * 0.02;

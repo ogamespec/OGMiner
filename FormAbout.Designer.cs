@@ -50,7 +50,7 @@
 			label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 204);
 			label1.Location = new Point(368, 44);
 			label1.Name = "label1";
-			label1.Size = new Size(462, 45);
+			label1.Size = new Size(519, 45);
 			label1.TabIndex = 1;
 			label1.Text = "OGMiner (ver 1.1) - OGame production calculation utility\r\n© 2024, Andorianin\r\nThe author takes no responsibility according to the Creative Commons 1.0 license";
 			// 

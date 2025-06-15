@@ -1,4 +1,6 @@
-﻿namespace OGMiner
+﻿using System.Windows.Forms;
+
+namespace OGMiner
 {
 	partial class FormMain
 	{
@@ -46,6 +48,8 @@
 			toolStripStatusLabel2 = new ToolStripStatusLabel();
 			toolStripStatusLabel3 = new ToolStripStatusLabel();
 			toolStripStatusLabel4 = new ToolStripStatusLabel();
+			toolStripStatusLabel5 = new ToolStripStatusLabel();
+			toolStripStatusLabel6 = new ToolStripStatusLabel();
 			tabControl1 = new TabControl();
 			tabPage1 = new TabPage();
 			label14 = new Label();
@@ -77,6 +81,14 @@
 			label2 = new Label();
 			label1 = new Label();
 			dataGridView1 = new DataGridView();
+			ProdType = new DataGridViewTextBoxColumn();
+			Level = new DataGridViewTextBoxColumn();
+			ProdImage = new DataGridViewImageColumn();
+			m = new DataGridViewTextBoxColumn();
+			k = new DataGridViewTextBoxColumn();
+			d = new DataGridViewTextBoxColumn();
+			e = new DataGridViewTextBoxColumn();
+			ProdSetting = new DataGridViewComboBoxColumn();
 			toolStrip1 = new ToolStrip();
 			toolStripDropDownButton2 = new ToolStripDropDownButton();
 			воиныToolStripMenuItem = new ToolStripMenuItem();
@@ -100,14 +112,6 @@
 			toolStripButton4 = new ToolStripButton();
 			toolStripButton5 = new ToolStripButton();
 			toolStripButton6 = new ToolStripButton();
-			ProdType = new DataGridViewTextBoxColumn();
-			Level = new DataGridViewTextBoxColumn();
-			ProdImage = new DataGridViewImageColumn();
-			m = new DataGridViewTextBoxColumn();
-			k = new DataGridViewTextBoxColumn();
-			d = new DataGridViewTextBoxColumn();
-			e = new DataGridViewTextBoxColumn();
-			ProdSetting = new DataGridViewComboBoxColumn();
 			menuStrip1.SuspendLayout();
 			statusStrip1.SuspendLayout();
 			tabControl1.SuspendLayout();
@@ -136,33 +140,33 @@
 			// экспортироватьНастройкиToolStripMenuItem
 			// 
 			экспортироватьНастройкиToolStripMenuItem.Name = "экспортироватьНастройкиToolStripMenuItem";
-			экспортироватьНастройкиToolStripMenuItem.Size = new Size(163, 22);
+			экспортироватьНастройкиToolStripMenuItem.Size = new Size(233, 22);
 			экспортироватьНастройкиToolStripMenuItem.Text = "Export settings...";
 			экспортироватьНастройкиToolStripMenuItem.Click += экспортироватьНастройкиToolStripMenuItem_Click;
 			// 
 			// импортироватьНастройкиToolStripMenuItem
 			// 
 			импортироватьНастройкиToolStripMenuItem.Name = "импортироватьНастройкиToolStripMenuItem";
-			импортироватьНастройкиToolStripMenuItem.Size = new Size(163, 22);
+			импортироватьНастройкиToolStripMenuItem.Size = new Size(233, 22);
 			импортироватьНастройкиToolStripMenuItem.Text = "Import settings...";
 			импортироватьНастройкиToolStripMenuItem.Click += импортироватьНастройкиToolStripMenuItem_Click;
 			// 
 			// сброситьНастройкиToolStripMenuItem
 			// 
 			сброситьНастройкиToolStripMenuItem.Name = "сброситьНастройкиToolStripMenuItem";
-			сброситьНастройкиToolStripMenuItem.Size = new Size(163, 22);
+			сброситьНастройкиToolStripMenuItem.Size = new Size(233, 22);
 			сброситьНастройкиToolStripMenuItem.Text = "Reset settings";
 			сброситьНастройкиToolStripMenuItem.Click += сброситьНастройкиToolStripMenuItem_Click;
 			// 
 			// toolStripSeparator2
 			// 
 			toolStripSeparator2.Name = "toolStripSeparator2";
-			toolStripSeparator2.Size = new Size(160, 6);
+			toolStripSeparator2.Size = new Size(230, 6);
 			// 
 			// exitToolStripMenuItem
 			// 
 			exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			exitToolStripMenuItem.Size = new Size(163, 22);
+			exitToolStripMenuItem.Size = new Size(233, 22);
 			exitToolStripMenuItem.Text = "Exit";
 			exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
 			// 
@@ -192,7 +196,7 @@
 			// 
 			// statusStrip1
 			// 
-			statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, toolStripStatusLabel3, toolStripStatusLabel4 });
+			statusStrip1.Items.AddRange(new ToolStripItem[] { toolStripStatusLabel1, toolStripStatusLabel2, toolStripStatusLabel3, toolStripStatusLabel4, toolStripStatusLabel5, toolStripStatusLabel6 });
 			statusStrip1.Location = new Point(0, 620);
 			statusStrip1.Name = "statusStrip1";
 			statusStrip1.Size = new Size(1363, 24);
@@ -202,7 +206,7 @@
 			// toolStripStatusLabel1
 			// 
 			toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-			toolStripStatusLabel1.Size = new Size(105, 19);
+			toolStripStatusLabel1.Size = new Size(165, 19);
 			toolStripStatusLabel1.Text = "Production Factor:";
 			// 
 			// toolStripStatusLabel2
@@ -215,14 +219,27 @@
 			// toolStripStatusLabel3
 			// 
 			toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-			toolStripStatusLabel3.Size = new Size(81, 19);
+			toolStripStatusLabel3.Size = new Size(118, 19);
 			toolStripStatusLabel3.Text = "Max Crawlers:";
 			// 
 			// toolStripStatusLabel4
 			// 
+			toolStripStatusLabel4.BorderSides = ToolStripStatusLabelBorderSides.Right;
 			toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-			toolStripStatusLabel4.Size = new Size(13, 19);
+			toolStripStatusLabel4.Size = new Size(17, 19);
 			toolStripStatusLabel4.Text = "0";
+			// 
+			// toolStripStatusLabel5
+			// 
+			toolStripStatusLabel5.Name = "toolStripStatusLabel5";
+			toolStripStatusLabel5.Size = new Size(107, 19);
+			toolStripStatusLabel5.Text = "Production (MSU):";
+			// 
+			// toolStripStatusLabel6
+			// 
+			toolStripStatusLabel6.Name = "toolStripStatusLabel6";
+			toolStripStatusLabel6.Size = new Size(34, 19);
+			toolStripStatusLabel6.Text = "0.00Bn";
 			// 
 			// tabControl1
 			// 
@@ -293,7 +310,7 @@
 			label15.AutoSize = true;
 			label15.Location = new Point(990, 249);
 			label15.Name = "label15";
-			label15.Size = new Size(186, 15);
+			label15.Size = new Size(213, 15);
 			label15.TabIndex = 36;
 			label15.Text = "Life form bonus for the class (T18)";
 			// 
@@ -302,7 +319,7 @@
 			label13.AutoSize = true;
 			label13.Location = new Point(990, 220);
 			label13.Name = "label13";
-			label13.Size = new Size(106, 15);
+			label13.Size = new Size(160, 15);
 			label13.TabIndex = 25;
 			label13.Text = "Energy technology";
 			// 
@@ -313,7 +330,7 @@
 			checkBox1.CheckState = CheckState.Checked;
 			checkBox1.Location = new Point(990, 449);
 			checkBox1.Name = "checkBox1";
-			checkBox1.Size = new Size(279, 19);
+			checkBox1.Size = new Size(360, 19);
 			checkBox1.TabIndex = 24;
 			checkBox1.Text = "Automatically maximize the number of crawlers";
 			checkBox1.UseVisualStyleBackColor = true;
@@ -362,7 +379,7 @@
 			label12.AutoSize = true;
 			label12.Location = new Point(13, 112);
 			label12.Name = "label12";
-			label12.Size = new Size(43, 15);
+			label12.Size = new Size(52, 15);
 			label12.TabIndex = 33;
 			label12.Text = "Energy";
 			// 
@@ -389,7 +406,7 @@
 			label10.AutoSize = true;
 			label10.Location = new Point(13, 83);
 			label10.Name = "label10";
-			label10.Size = new Size(63, 15);
+			label10.Size = new Size(60, 15);
 			label10.TabIndex = 30;
 			label10.Text = "Deuterium";
 			// 
@@ -416,7 +433,7 @@
 			label8.AutoSize = true;
 			label8.Location = new Point(13, 54);
 			label8.Name = "label8";
-			label8.Size = new Size(43, 15);
+			label8.Size = new Size(59, 15);
 			label8.TabIndex = 27;
 			label8.Text = "Crystal";
 			// 
@@ -443,7 +460,7 @@
 			label5.AutoSize = true;
 			label5.Location = new Point(13, 25);
 			label5.Name = "label5";
-			label5.Size = new Size(37, 15);
+			label5.Size = new Size(49, 15);
 			label5.TabIndex = 24;
 			label5.Text = "Metal";
 			// 
@@ -503,7 +520,7 @@
 			label3.AutoSize = true;
 			label3.Location = new Point(990, 162);
 			label3.Name = "label3";
-			label3.Size = new Size(164, 15);
+			label3.Size = new Size(209, 15);
 			label3.TabIndex = 16;
 			label3.Text = "Minimum planet temperature";
 			// 
@@ -520,7 +537,7 @@
 			label2.AutoSize = true;
 			label2.Location = new Point(990, 104);
 			label2.Name = "label2";
-			label2.Size = new Size(112, 15);
+			label2.Size = new Size(124, 15);
 			label2.TabIndex = 13;
 			label2.Text = "Development speed";
 			// 
@@ -529,7 +546,7 @@
 			label1.AutoSize = true;
 			label1.Location = new Point(990, 133);
 			label1.Name = "label1";
-			label1.Size = new Size(106, 15);
+			label1.Size = new Size(113, 15);
 			label1.TabIndex = 12;
 			label1.Text = "Number of planets";
 			// 
@@ -552,6 +569,60 @@
 			dataGridView1.Name = "dataGridView1";
 			dataGridView1.Size = new Size(936, 541);
 			dataGridView1.TabIndex = 11;
+			// 
+			// ProdType
+			// 
+			ProdType.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+			ProdType.HeaderText = "Name of production/building";
+			ProdType.Name = "ProdType";
+			ProdType.ReadOnly = true;
+			ProdType.Width = 160;
+			// 
+			// Level
+			// 
+			Level.HeaderText = "Level/number";
+			Level.Name = "Level";
+			// 
+			// ProdImage
+			// 
+			ProdImage.HeaderText = "Picture";
+			ProdImage.ImageLayout = DataGridViewImageCellLayout.Zoom;
+			ProdImage.Name = "ProdImage";
+			ProdImage.ReadOnly = true;
+			ProdImage.Resizable = DataGridViewTriState.True;
+			ProdImage.SortMode = DataGridViewColumnSortMode.Automatic;
+			// 
+			// m
+			// 
+			m.HeaderText = "Metal";
+			m.Name = "m";
+			m.ReadOnly = true;
+			// 
+			// k
+			// 
+			k.HeaderText = "Crystal";
+			k.Name = "k";
+			k.ReadOnly = true;
+			// 
+			// d
+			// 
+			d.HeaderText = "Deuterium";
+			d.Name = "d";
+			d.ReadOnly = true;
+			// 
+			// e
+			// 
+			e.HeaderText = "Energy";
+			e.Name = "e";
+			e.ReadOnly = true;
+			// 
+			// ProdSetting
+			// 
+			ProdSetting.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
+			ProdSetting.HeaderText = "Production Settings";
+			ProdSetting.Items.AddRange(new object[] { "0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%", "110%", "120%", "130%", "140%", "150%" });
+			ProdSetting.Name = "ProdSetting";
+			ProdSetting.Width = 98;
 			// 
 			// toolStrip1
 			// 
@@ -579,7 +650,7 @@
 			// 
 			воиныToolStripMenuItem.Image = Properties.Resources.ally_warriors;
 			воиныToolStripMenuItem.Name = "воиныToolStripMenuItem";
-			воиныToolStripMenuItem.Size = new Size(207, 22);
+			воиныToolStripMenuItem.Size = new Size(158, 22);
 			воиныToolStripMenuItem.Text = "Warriors";
 			воиныToolStripMenuItem.Click += воиныToolStripMenuItem_Click;
 			// 
@@ -587,7 +658,7 @@
 			// 
 			торговцыToolStripMenuItem.Image = Properties.Resources.ally_traders;
 			торговцыToolStripMenuItem.Name = "торговцыToolStripMenuItem";
-			торговцыToolStripMenuItem.Size = new Size(207, 22);
+			торговцыToolStripMenuItem.Size = new Size(158, 22);
 			торговцыToolStripMenuItem.Text = "Traders";
 			торговцыToolStripMenuItem.Click += торговцыToolStripMenuItem_Click;
 			// 
@@ -595,7 +666,7 @@
 			// 
 			исследователиToolStripMenuItem.Image = Properties.Resources.ally_explorers;
 			исследователиToolStripMenuItem.Name = "исследователиToolStripMenuItem";
-			исследователиToolStripMenuItem.Size = new Size(207, 22);
+			исследователиToolStripMenuItem.Size = new Size(158, 22);
 			исследователиToolStripMenuItem.Text = "Researchers";
 			исследователиToolStripMenuItem.Click += исследователиToolStripMenuItem_Click;
 			// 
@@ -603,7 +674,7 @@
 			// 
 			неВыбраноToolStripMenuItem.Image = Properties.Resources.ally_not_selected;
 			неВыбраноToolStripMenuItem.Name = "неВыбраноToolStripMenuItem";
-			неВыбраноToolStripMenuItem.Size = new Size(207, 22);
+			неВыбраноToolStripMenuItem.Size = new Size(158, 22);
 			неВыбраноToolStripMenuItem.Text = "No alliance class selected";
 			неВыбраноToolStripMenuItem.Click += неВыбраноToolStripMenuItem_Click;
 			// 
@@ -624,7 +695,7 @@
 			toolStripMenuItem1.Image = Properties.Resources.collector;
 			toolStripMenuItem1.ImageAlign = ContentAlignment.MiddleLeft;
 			toolStripMenuItem1.Name = "toolStripMenuItem1";
-			toolStripMenuItem1.Size = new Size(199, 22);
+			toolStripMenuItem1.Size = new Size(157, 22);
 			toolStripMenuItem1.Text = "Collector";
 			toolStripMenuItem1.Click += toolStripMenuItem1_Click;
 			// 
@@ -632,7 +703,7 @@
 			// 
 			генералToolStripMenuItem.Image = Properties.Resources.general;
 			генералToolStripMenuItem.Name = "генералToolStripMenuItem";
-			генералToolStripMenuItem.Size = new Size(199, 22);
+			генералToolStripMenuItem.Size = new Size(157, 22);
 			генералToolStripMenuItem.Text = "General";
 			генералToolStripMenuItem.Click += генералToolStripMenuItem_Click;
 			// 
@@ -640,7 +711,7 @@
 			// 
 			исследовательToolStripMenuItem.Image = Properties.Resources.explorer;
 			исследовательToolStripMenuItem.Name = "исследовательToolStripMenuItem";
-			исследовательToolStripMenuItem.Size = new Size(199, 22);
+			исследовательToolStripMenuItem.Size = new Size(157, 22);
 			исследовательToolStripMenuItem.Text = "Discoverer";
 			исследовательToolStripMenuItem.Click += исследовательToolStripMenuItem_Click;
 			// 
@@ -648,7 +719,7 @@
 			// 
 			неВыбранToolStripMenuItem.Image = Properties.Resources.not_selected;
 			неВыбранToolStripMenuItem.Name = "неВыбранToolStripMenuItem";
-			неВыбранToolStripMenuItem.Size = new Size(199, 22);
+			неВыбранToolStripMenuItem.Size = new Size(157, 22);
 			неВыбранToolStripMenuItem.Text = "No player class selected";
 			неВыбранToolStripMenuItem.Click += неВыбранToolStripMenuItem_Click;
 			// 
@@ -667,7 +738,7 @@
 			// 
 			людиToolStripMenuItem.Image = Properties.Resources.human;
 			людиToolStripMenuItem.Name = "людиToolStripMenuItem";
-			людиToolStripMenuItem.Size = new Size(184, 22);
+			людиToolStripMenuItem.Size = new Size(141, 22);
 			людиToolStripMenuItem.Text = "Humans";
 			людиToolStripMenuItem.Click += людиToolStripMenuItem_Click;
 			// 
@@ -675,7 +746,7 @@
 			// 
 			кэлишToolStripMenuItem.Image = Properties.Resources.shaved_pubis;
 			кэлишToolStripMenuItem.Name = "кэлишToolStripMenuItem";
-			кэлишToolStripMenuItem.Size = new Size(184, 22);
+			кэлишToolStripMenuItem.Size = new Size(141, 22);
 			кэлишToolStripMenuItem.Text = "Kaelesh";
 			кэлишToolStripMenuItem.Click += кэлишToolStripMenuItem_Click;
 			// 
@@ -683,7 +754,7 @@
 			// 
 			рокталToolStripMenuItem.Image = Properties.Resources.rock;
 			рокталToolStripMenuItem.Name = "рокталToolStripMenuItem";
-			рокталToolStripMenuItem.Size = new Size(184, 22);
+			рокталToolStripMenuItem.Size = new Size(141, 22);
 			рокталToolStripMenuItem.Text = "Rock’tal";
 			рокталToolStripMenuItem.Click += рокталToolStripMenuItem_Click;
 			// 
@@ -691,7 +762,7 @@
 			// 
 			мехиToolStripMenuItem.Image = Properties.Resources.mecha;
 			мехиToolStripMenuItem.Name = "мехиToolStripMenuItem";
-			мехиToolStripMenuItem.Size = new Size(184, 22);
+			мехиToolStripMenuItem.Size = new Size(141, 22);
 			мехиToolStripMenuItem.Text = "Mechas";
 			мехиToolStripMenuItem.Click += мехиToolStripMenuItem_Click;
 			// 
@@ -699,7 +770,7 @@
 			// 
 			неВыбраноToolStripMenuItem1.Image = Properties.Resources.nolf;
 			неВыбраноToolStripMenuItem1.Name = "неВыбраноToolStripMenuItem1";
-			неВыбраноToolStripMenuItem1.Size = new Size(184, 22);
+			неВыбраноToolStripMenuItem1.Size = new Size(141, 22);
 			неВыбраноToolStripMenuItem1.Text = "No life form selected";
 			неВыбраноToolStripMenuItem1.Click += неВыбраноToolStripMenuItem1_Click;
 			// 
@@ -767,60 +838,6 @@
 			toolStripButton6.Text = "toolStripButton6";
 			toolStripButton6.ToolTipText = "Technocrat\r\nGives production bonus only with full Staff";
 			toolStripButton6.Click += toolStripButton6_Click;
-			// 
-			// ProdType
-			// 
-			ProdType.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-			ProdType.HeaderText = "Name of production/building";
-			ProdType.Name = "ProdType";
-			ProdType.ReadOnly = true;
-			ProdType.Width = 132;
-			// 
-			// Level
-			// 
-			Level.HeaderText = "Level/number";
-			Level.Name = "Level";
-			// 
-			// ProdImage
-			// 
-			ProdImage.HeaderText = "Picture";
-			ProdImage.ImageLayout = DataGridViewImageCellLayout.Zoom;
-			ProdImage.Name = "ProdImage";
-			ProdImage.ReadOnly = true;
-			ProdImage.Resizable = DataGridViewTriState.True;
-			ProdImage.SortMode = DataGridViewColumnSortMode.Automatic;
-			// 
-			// m
-			// 
-			m.HeaderText = "Metal";
-			m.Name = "m";
-			m.ReadOnly = true;
-			// 
-			// k
-			// 
-			k.HeaderText = "Crystal";
-			k.Name = "k";
-			k.ReadOnly = true;
-			// 
-			// d
-			// 
-			d.HeaderText = "Deuterium";
-			d.Name = "d";
-			d.ReadOnly = true;
-			// 
-			// e
-			// 
-			e.HeaderText = "Energy";
-			e.Name = "e";
-			e.ReadOnly = true;
-			// 
-			// ProdSetting
-			// 
-			ProdSetting.AutoSizeMode = DataGridViewAutoSizeColumnMode.ColumnHeader;
-			ProdSetting.HeaderText = "Production Settings";
-			ProdSetting.Items.AddRange(new object[] { "0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", "90%", "100%", "110%", "120%", "130%", "140%", "150%" });
-			ProdSetting.Name = "ProdSetting";
-			ProdSetting.Width = 78;
 			// 
 			// FormMain
 			// 
@@ -899,6 +916,14 @@
 		private Label label2;
 		private Label label1;
 		private DataGridView dataGridView1;
+		private DataGridViewTextBoxColumn ProdType;
+		private DataGridViewTextBoxColumn Level;
+		private DataGridViewImageColumn ProdImage;
+		private DataGridViewTextBoxColumn m;
+		private DataGridViewTextBoxColumn k;
+		private DataGridViewTextBoxColumn d;
+		private DataGridViewTextBoxColumn e;
+		private DataGridViewComboBoxColumn ProdSetting;
 		private ToolStrip toolStrip1;
 		private ToolStripDropDownButton toolStripDropDownButton2;
 		private ToolStripMenuItem воиныToolStripMenuItem;
@@ -922,13 +947,7 @@
 		private ToolStripButton toolStripButton4;
 		private ToolStripButton toolStripButton5;
 		private ToolStripButton toolStripButton6;
-		private DataGridViewTextBoxColumn ProdType;
-		private DataGridViewTextBoxColumn Level;
-		private DataGridViewImageColumn ProdImage;
-		private DataGridViewTextBoxColumn m;
-		private DataGridViewTextBoxColumn k;
-		private DataGridViewTextBoxColumn d;
-		private DataGridViewTextBoxColumn e;
-		private DataGridViewComboBoxColumn ProdSetting;
+		private ToolStripStatusLabel toolStripStatusLabel5;
+		private ToolStripStatusLabel toolStripStatusLabel6;
 	}
 }

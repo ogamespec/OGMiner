@@ -84,7 +84,7 @@ namespace OGMiner
 
 		private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			FormAbout about = new FormAbout();
+			FormAbout about = new FormAbout("ru");
 			about.ShowDialog();
 		}
 

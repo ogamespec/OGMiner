@@ -12,9 +12,9 @@
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
     <PackageIcon></PackageIcon>
     <ErrorReport>none</ErrorReport>
-    <AssemblyVersion>1.1</AssemblyVersion>
+    <AssemblyVersion>1.2</AssemblyVersion>
     <Title>Utility for calculating the production of planets for the browser game OGame</Title>
-    <Copyright>Copyright © 2024 Andorianin</Copyright>
+    <Copyright>Copyright © 2025 Andorianin</Copyright>
     <PackageProjectUrl>https://github.com/ogamespec/OGMiner</PackageProjectUrl>
   </PropertyGroup>
 
